@@ -1,3 +1,9 @@
-document.getElementById("clickMe").addEventListener("click", function() {
-    alert("Button clicked!");
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("Welcome to Justin's Portfolio!");
+
+    document.querySelectorAll(".project-card").forEach(card => {
+        card.addEventListener("click", () => {
+            alert("Project details coming soon!");
+        });
+    });
 });
