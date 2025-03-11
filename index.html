@@ -21,15 +21,26 @@
 
     <section id="projects" class="content">
         <h2>My Projects</h2>
-        <div class="project-container">
-            <div class="project-card">Project 1 Placeholder</div>
+        <div class="project-wrapper">
+            <div class="project-text">
+                <h3>Alien Invasion</h3>
+                <p>A space shooter game where you fight off waves of invading aliens! I coded this with Python using the Pygame package. The executable was built using PyInstaller. You can view the code on my GitHub page, or you can download and launch the game directly.</p>
+            </div>
+        
+            <div class="project-container">
+                <div class="project-card">
+                    <img src="AlienInvasion.png" alt="Alien Invasion" class="card-pic" id="projectImage">
+                    <a href="https://drive.google.com/file/d/1kTRMUrUEbkIDzmqiFrM-nlcbqSSX5dIr/view?usp=sharing" class="download-link" target="_blank">Download</a>
+                </div>
+            </div>
         </div>
-        <div class="project-container">
-            <div class="project-card">Project 2 Placeholder</div>
+        
+        <!-- Modal for Enlarged Image -->
+        <div id="imageModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg">
         </div>
-        <div class="project-container">
-            <div class="project-card">Project 3 Placeholder</div>
-        </div>
+
     </section>
     
     <footer>

@@ -62,18 +62,39 @@ p {
     padding: 50px;
 }
 
-.project-container {
+.project-wrapper {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    padding: 50px
+    align-items: center; 
+    justify-content: space-between;
+    gap: 50px; 
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+.project-text {
+    flex: 1; 
+    text-align: left;
+}
+
+.project-container {
+    flex: 1;
+    display: flex;
+    justify-content: right;
 }
 
 .project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.card-pic {
     background: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 5px;
+    border-radius: 2px;
     width: 200px;
     height: 150px;
     display: flex;
@@ -82,6 +103,50 @@ p {
     font-size: 1.2em;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.download-link {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.download-link:hover {
+    background-color: #0056b3;
 }
 
 .project-card:hover {
@@ -108,6 +173,14 @@ a {
 
 /* For tablets (widths below 768px) */
 @media (max-width: 768px) {
+    .project-container {
+        display: flex;
+        justify-content: right;
+        gap: 20px;
+        flex-wrap: wrap;
+        padding: 50px ;
+        margin-right: auto ;
+    }
     .profile-container {
         display: flex;
         align-items: left;
@@ -131,6 +204,14 @@ a {
 
 /* For mobile devices (widths below 480px) */
 @media (max-width: 480px) {
+    .project-container {
+        display: flex;
+        justify-content: right;
+        gap: 20px;
+        flex-wrap: wrap;
+        padding: 50px ;
+        margin-right: auto ;
+    }
     .profile-container {
         display: flex;
         align-items: left;
